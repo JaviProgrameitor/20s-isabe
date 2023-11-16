@@ -26,41 +26,21 @@ function Libro() {
     Pagina6,
     Sinopsis
   ]
-  const [ paginaActuales, setPaginaActuales ] = useState()
-  console.log(paginaActuales)
-
-  function paginaSiguiente() {
-    if(paginaActuales === 7) book.current.pageFlip().flip(0)
-    else book.current.pageFlip().flipNext()
-  }
-
-  function paginaActual(e) {
-    setPaginaActuales(e.data)
-  }
-
-  useEffect(() => {
-    const actualizandoFecha = setInterval(() => {
-      paginaSiguiente()
-    }, 7000);
-
-    return () => clearInterval(actualizandoFecha);
-  }, []);
 
   return (
     <div>
       <HTMLFlipBook
-        width={215} 
-        height={308} 
+        width={323} 
+        height={462} 
         flippingTime={1500}
         usePortrait={false}
         showCover
         ref={book}
-        onFlip={paginaActual}
       >
         {
           paginas.map((pagina, index) => 
             <div className="paginas" key={index}>
-              <img src={pagina} alt="" />
+              <img className="imagen" src={pagina} alt="" />
             </div>
           )
         }

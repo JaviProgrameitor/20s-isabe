@@ -13,3 +13,7 @@
 .paginas {
   border: 16px solid black;
 }
+
+.imagen {
+  width: 100%;
+}
