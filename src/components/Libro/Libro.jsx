@@ -49,8 +49,8 @@ function Libro() {
   return (
     <div>
       <HTMLFlipBook
-        width={431} 
-        height={616} 
+        width={215} 
+        height={308} 
         flippingTime={1500}
         usePortrait={false}
         showCover
