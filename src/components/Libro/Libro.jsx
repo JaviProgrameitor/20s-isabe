@@ -41,7 +41,7 @@ function Libro() {
   useEffect(() => {
     const actualizandoFecha = setInterval(() => {
       paginaSiguiente()
-    }, 3000);
+    }, 7000);
 
     return () => clearInterval(actualizandoFecha);
   }, []);
