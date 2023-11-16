@@ -33,7 +33,6 @@ function Libro() {
         width={323} 
         height={462} 
         flippingTime={1500}
-        usePortrait={false}
         showCover
         ref={book}
       >
